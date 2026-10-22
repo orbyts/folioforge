@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "folioforge"
+version = "0.0.0"
+description = "A foundation for a shared icon, banner, and brand asset library."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{name = "Suhail"}]
+dependencies = []
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Graphics",
+]
+
+[project.scripts]
+folioforge = "folioforge.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/orbyts/folioforge"
+Repository = "https://github.com/orbyts/folioforge"
+Issues = "https://github.com/orbyts/folioforge/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/folioforge"]
